@@ -45,7 +45,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'coaches.urls'
+ROOT_URLCONF = 'box_girls.urls'
 
 TEMPLATES = [
     {
@@ -63,7 +63,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'coaches.wsgi.application'
+WSGI_APPLICATION = 'box_girls.wsgi.application'
 
 
 DATABASES = {

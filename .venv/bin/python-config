@@ -1,4 +1,4 @@
-#!/home/psv/Development/Projects/MuemaKamba/coaches/.venv/bin/python
+#!/home/psvlance/Development/Projects/MuemaKamba/box_girls/.venv/bin/python
 
 import sys
 import getopt
