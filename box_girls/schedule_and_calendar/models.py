@@ -6,7 +6,7 @@ from django.db import models
 from questions.models import TextQuestion
 
 
-class ActivityScheduleAndCalendar(models.Model):
+class Activity(models.Model):
     from_date = models.DateField(blank=True)
     to_date = models.DateField(blank=True)
     from_time = models.TimeField(blank=True)

@@ -8,6 +8,6 @@ from rest_framework.response import Response
 
 from .serializers import *
 
-class ActivityScheduleAndCalendarViewSet(viewsets.ModelViewSet):
-    queryset = ActivityScheduleAndCalendar.objects.all()
-    serializer_class = ActivityScheduleAndCalendarSerializer
+class ActivityViewSet(viewsets.ModelViewSet):
+    queryset = Activity.objects.all()
+    serializer_class = ActivitySerializer

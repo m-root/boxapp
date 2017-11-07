@@ -11,6 +11,12 @@ class MiniCoaches(AbstractUserRole):
 		'create_schedule_and_calendar':True,
 		'edit_schedule_and_calendar':True,
 		'remove_schedule_and_calendar':True,
+		'create_category':True,
+		'edit_category':True,
+		'remove_category':True,		
+		'create_notification':True,
+		'edit_notification':True,
+		'remove_notification':True,
     }
 
 class ProgramHeads(AbstractUserRole):
@@ -24,7 +30,12 @@ class ProgramHeads(AbstractUserRole):
 		'create_schedule_and_calendar':True,
 		'edit_schedule_and_calendar':True,
 		'remove_schedule_and_calendar':True,
-
+		'create_category':False,
+		'edit_category':False,
+		'remove_category':False,		
+		'create_notification':True,
+		'edit_notification':True,
+		'remove_notification':True,
     }
 
 class ME(AbstractUserRole):
@@ -38,7 +49,12 @@ class ME(AbstractUserRole):
 		'create_schedule_and_calendar':True,
 		'edit_schedule_and_calendar':True,
 		'remove_schedule_and_calendar':True,
-
+		'create_category':False,
+		'edit_category':False,
+		'remove_category':False,		
+		'create_notification':True,
+		'edit_notification':True,
+		'remove_notification':True,
     }
 
 class Management(AbstractUserRole):
@@ -52,5 +68,10 @@ class Management(AbstractUserRole):
 		'create_schedule_and_calendar':False,
 		'edit_schedule_and_calendar':False,
 		'remove_schedule_and_calendar':False,
-
+		'create_category':False,
+		'edit_category':False,
+		'remove_category':False,		
+		'create_notification':False,
+		'edit_notification':False,
+		'remove_notification':False,
     }

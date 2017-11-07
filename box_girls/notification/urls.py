@@ -1,8 +1,8 @@
-from .views import *
 from rest_framework import routers
+
+from .views import *
 
 
 router = routers.DefaultRouter()
-# router.register(r'', ViewSet, base_name='api_')
-
+router.register(r'notification', NotificationViewSet, base_name='api_notification')
 urlpatterns = [] + router.urls

@@ -4,5 +4,5 @@ from .views import *
 
 
 router = routers.DefaultRouter()
-router.register(r'activity', ActivityScheduleAndCalendarViewSet, base_name='api_activity')
+router.register(r'activity', ActivityViewSet, base_name='api_activity')
 urlpatterns = [] + router.urls

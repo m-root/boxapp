@@ -2,8 +2,8 @@ from rest_framework import serializers
 
 from .models import *
 
-class ActivitySerializer(serializers.ModelSerializer):
+class NotificationSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Activity
+        model = Notification
         fields ='__all__'
 
