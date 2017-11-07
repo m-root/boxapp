@@ -1,21 +1,29 @@
-"""coaches URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/1.11/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.conf.urls import url, include
-    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
-"""
-from django.conf.urls import url
+from django.conf.urls import include, url
 from django.contrib import admin
+from rest_framework.schemas import get_schema_view
+from rest_framework_swagger.views import get_swagger_view
+from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken import views as token_views
+from .views import redocs
+
+router = DefaultRouter()
+
+schema_view = get_swagger_view(title='API Docs')
 
 urlpatterns = [
+    url(r'^jet/', include('jet.urls', 'jet')),
     url(r'^admin/', admin.site.urls),
+    url(r'^api-docs/', schema_view),
+
+    url(r'^redocs/$', redocs),
+
+    url(r'^api/rest-auth/', include('rest_auth.urls', namespace='rest_auth')),
+
+    # url(r'^api/', include('agents.urls', namespace='agents')),
+    url(r'^api/', include('attendance.urls')),
+    url(r'^api/', include('category.urls')),
+    url(r'^api/', include('notification.urls')),
+    url(r'^api/', include('report_system.urls')),
+    url(r'^api/', include('schedule_and_calendar.urls')),
+    url(r'^api/', include('user_system.urls')),
 ]

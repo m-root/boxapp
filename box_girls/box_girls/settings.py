@@ -13,6 +13,7 @@ ALLOWED_HOSTS = ['*', ]
 
 INSTALLED_APPS = [
     'jet',
+    'rolepermissions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -30,9 +31,10 @@ INSTALLED_APPS = [
     'user_system',
     'category',
     'attendance',
-    'notifications',
+    'notification',
     'report_system',
     'schedule_and_calendar',
+    'questions'
 ]
 
 MIDDLEWARE = [
@@ -126,3 +128,5 @@ STATICFILES_DIRS = [
 #         }
 #     },
 # }
+
+ROLEPERMISSIONS_MODULE = 'box_girls.roles'
