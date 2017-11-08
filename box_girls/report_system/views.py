@@ -7,12 +7,3 @@ from rest_framework.response import Response
 
 
 from .serializers import *
-
-class MembershipRegistrationViewSet(viewsets.ModelViewSet):
-    queryset = MembershipRegistration.objects.all()
-    serializer_class = MembershipRegistrationSerializer
-
-
-class GuardianViewSet(viewsets.ModelViewSet):
-    queryset = Guardian.objects.all()
-    serializer_class = GuardianSerializer
